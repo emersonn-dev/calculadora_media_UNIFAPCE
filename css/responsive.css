@@ -1,0 +1,20 @@
+/* dispositivo móvel pequeno */
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .container { padding: 12px; }
+  h1 { font-size: 1.25rem; }
+  button { flex: 1; }
+  .actions { flex-direction: column; }
+}
+
+/* tablet médio */
+@media (min-width: 601px) and (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2,1fr); }
+  .container { padding: 20px; }
+}
+
+/* desktop maior - ajuste fino */
+@media (min-width: 1200px) {
+  .container { max-width: 1100px; }
+  .card { padding: 22px; }
+}
