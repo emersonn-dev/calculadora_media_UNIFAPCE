@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Calculadora de Média - Faculdade</title>
+  <title>Calculadora de Média</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
@@ -12,54 +12,58 @@
     <h1>Calculadora de Média</h1>
 
     <section class="card">
-      <h2>TDEs (cada TDE vale até 10)</h2>
-      <div class="grid">
+      <h2>TDEs</h2>
+      <div class="grid tdes">
         <label>
-          TDE 1
-          <input id="tde1" type="number" min="0" max="10" step="0.1" value="0">
+          <span>TDE 1</span>
+          <input inputmode="decimal" type="number" id="tde1" placeholder="0" min="0" max="10" step="0.1" />
         </label>
         <label>
-          TDE 2
-          <input id="tde2" type="number" min="0" max="10" step="0.1" value="0">
+          <span>TDE 2</span>
+          <input inputmode="decimal" type="number" id="tde2" placeholder="0" min="0" max="10" step="0.1" />
         </label>
         <label>
-          TDE 3
-          <input id="tde3" type="number" min="0" max="10" step="0.1" value="0">
+          <span>TDE 3</span>
+          <input inputmode="decimal" type="number" id="tde3" placeholder="0" min="0" max="10" step="0.1" />
         </label>
         <label>
-          TDE 4
-          <input id="tde4" type="number" min="0" max="10" step="0.1" value="0">
+          <span>TDE 4</span>
+          <input inputmode="decimal" type="number" id="tde4" placeholder="0" min="0" max="10" step="0.1" />
         </label>
       </div>
+      
     </section>
 
     <section class="card">
       <h2>AVPs</h2>
-      <div class="grid avp-grid">
+      <div class="grid avps">
         <label>
-          AVP 1
-          <input id="avp1" type="number" min="0" max="10" step="0.1" value="0">
+          <span>AVP 1</span>
+          <input inputmode="decimal" type="number" id="avp1" placeholder="0" min="0" max="10" step="0.1" />
         </label>
         <label>
-          AVP 2
-          <input id="avp2" type="number" min="0" max="10" step="0.1" value="0">
+          <span>AVP 2</span>
+          <input inputmode="decimal" type="number" id="avp2" placeholder="0" min="0" max="10" step="0.1" />
         </label>
       </div>
     </section>
 
     <div class="actions">
-      <button id="calcular">Calcular Média</button>
-      <button id="limpar" class="secondary">Limpar</button>
+      <button id="calcBtn">Calcular Média</button>
+      <button id="clearBtn" class="secondary">Limpar</button>
     </div>
 
-    <section class="result card" aria-live="polite">
+    <section class="card result-card" aria-live="polite">
       <h2>Resultado</h2>
-      <p id="mediaTdes">Média TDEs: —</p>
-      <p id="mediaFinal">Média Final: —</p>
-      <p id="status" class="status">Status: —</p>
+      <div id="resultArea" class="resultArea">
+        <div class="result-row"><strong>Média TDEs:</strong> <span id="mediaTDE">—</span></div>
+        <div class="result-row"><strong>Média Semestral:</strong> <span id="mediaSem">—</span></div>
+        <div class="badge" id="statusBadge" hidden>—</div>
+        <p id="message" class="message"></p>
+      </div>
     </section>
 
-    
+    <p id="error" class="error" role="alert" aria-live="assertive"></p>
   </main>
 
   <script src="script.js"></script>
