@@ -9,7 +9,7 @@
 
 /* tablet médio */
 @media (min-width: 601px) and (max-width: 900px) {
-  .grid { grid-template-columns: repeat(2,1fr); }
+  .grid { grid-template-columns: repeat(2,1fr); gap:16px; }
   .container { padding: 20px; }
 }
 
